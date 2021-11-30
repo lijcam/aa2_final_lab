@@ -3,7 +3,7 @@
   lineinfile:
     dest: /etc/hosts
     regexp: '.*appdb1$'
-    line: "192.168.51.15 database-01 }}"
+    line: "192.168.51.15 database-01"
     state: present
 
 - name: Create flask user

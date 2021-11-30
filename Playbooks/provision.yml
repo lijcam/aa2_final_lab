@@ -4,15 +4,13 @@
   hosts: localhost
   connection: local
   gather_facts: false
-  vars:
-    guid: "2881"
   tasks:
     - name: Include Instance variables
       include_vars: instances.yml
 
     - name: Create Instance
       openstack.cloud.server:
-        cloud: "{{ guid }}-project"
+        cloud: "2881-project"
         name: "{{ instance.name }}"
         image: "{{ instance.image }}"
         key_name: "{{ instance.keypair }}"
